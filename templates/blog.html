@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Blog</h1>
+
+{% for post in posts %}
+  <article>
+    <h2><a href="{{ post.path }}">{{ post.title }}</a> &mdash; <small>{{ post.date }}</small></h2>
+    <p>{{ post.excerpt }}</p>
+  </article>
+{% endfor %}
+
+{% endblock %}
